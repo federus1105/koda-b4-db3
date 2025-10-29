@@ -44,7 +44,7 @@ roles {
 
 
 actors }|--|{ roles : mendapatkan
-movies }|--o{ roles : memainkan
+roles }o--|{ movies : memainkan
 directors }|--o{ directors_genres : memiliki
 movies }|--o{ movies_genres : memiliki
 movies }o--|{ movies_directors : distutradarai
