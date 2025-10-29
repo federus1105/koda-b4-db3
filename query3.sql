@@ -11,3 +11,8 @@ HAVING count(roles.role) > 5
 ORDER BY amount_role DESC
 LIMIT 10
 ;
+
+-- 5
+SELECT movies.name, string_agg(movies_genres.genre, ', ') AS "Genre" FROM movies
+JOIN movies_genres ON movies_genres.movie_id = movies.id
+GROUP BY movies.name;
